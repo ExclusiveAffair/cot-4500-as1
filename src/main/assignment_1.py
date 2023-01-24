@@ -8,12 +8,12 @@ if __name__ == "__main__":
     
     # see binary_to_decimal_util.py
     exercise_1_str = pad_end("010000000111111010111001")
-    exercise_1_val = get_double_precision_val(exercise_1_str)
+    exercise_1_val = get_double_precision_val(exercise_1_str, Arith_Type.NONE)
     print('%.5f\n' % exercise_1_val)
 
     # see rounding_truncation_util.py
-    truncated = my_truncate(exercise_1_val, 3)
-    rounded = my_round(exercise_1_val, 3)
+    truncated = get_double_precision_val(exercise_1_str, Arith_Type.TRUNCATE)
+    rounded = get_double_precision_val(exercise_1_str, Arith_Type.ROUND)
     print(truncated, '\n')
     print(rounded, '\n')
 
