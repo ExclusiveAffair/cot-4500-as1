@@ -1,13 +1,22 @@
 from enum import Enum
-from rounding_truncation_util import *
+import math
+
+DOUBLE_PRECISION = 64
+ROUNDING_VAL = 3
 
 class Arith_Type(Enum):
     NONE = 1
     ROUND = 2
     TRUNCATE = 3
 
-DOUBLE_PRECISION = 64
-ROUNDING_VAL = 3
+def my_truncate(number, digits):
+    if number < 0.1 ** digits:
+        return 0
+    step = 10.0 ** digits
+    return math.trunc(step * number) / step
+
+def my_round(number, digits):
+    return my_truncate(number + (5 * (0.1 ** (digits + 1))), digits)
 
 def pad_end(value):
     while len(value) < DOUBLE_PRECISION:

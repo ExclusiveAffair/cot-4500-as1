@@ -1,5 +1,4 @@
 from binary_to_decimal_util import *
-from rounding_truncation_util import *
 from abs_rel_error_util import *
 from convergence_util import *
 from root_finding_util import *
@@ -11,7 +10,6 @@ if __name__ == "__main__":
     exercise_1_val = get_double_precision_val(exercise_1_str, Arith_Type.NONE)
     print('%.5f\n' % exercise_1_val)
 
-    # see rounding_truncation_util.py
     truncated = get_double_precision_val(exercise_1_str, Arith_Type.TRUNCATE)
     rounded = get_double_precision_val(exercise_1_str, Arith_Type.ROUND)
     print(truncated, '\n')
