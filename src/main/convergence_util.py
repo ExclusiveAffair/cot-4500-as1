@@ -28,8 +28,8 @@ def min_term_error(x):
 
     k = 1
 
-    while abs(get_kth_term(x, k)) > ERROR:
+    while abs(get_kth_term(x, k)) >= ERROR:
         k += 1
 
-    return k
+    return k - 1
     

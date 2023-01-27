@@ -7,11 +7,11 @@ if __name__ == "__main__":
     
     # see binary_to_decimal_util.py
     exercise_1_str = pad_end("010000000111111010111001")
-    exercise_1_val = get_double_precision_val(exercise_1_str, Arith_Type.NONE)
+    exercise_1_val = get_double_precision_val(exercise_1_str)
     print('%.5f\n' % exercise_1_val)
 
-    truncated = get_double_precision_val(exercise_1_str, Arith_Type.TRUNCATE)
-    rounded = get_double_precision_val(exercise_1_str, Arith_Type.ROUND)
+    truncated = my_truncate(exercise_1_val, 3)
+    rounded = my_round(exercise_1_val, 3)
     print(truncated, '\n')
     print(rounded, '\n')
 

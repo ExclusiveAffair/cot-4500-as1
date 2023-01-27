@@ -8,14 +8,13 @@ def calc_fx(x, f):
 
 def bisection_method(a, b):
     iter = 0
-    while b - a > ERROR and iter < MAX_ITERATIONS:
+    while abs(b - a) >= ERROR and iter < MAX_ITERATIONS:
         iter += 1
         mid = (b + a) / 2
         if calc_fx(mid, FUNCTION) < 0:
-            b = mid
-        else:
             a = mid
-
+        else:
+            b = mid
     return iter
 
 def newton_raphson_method(p0):
