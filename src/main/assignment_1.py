@@ -8,7 +8,7 @@ if __name__ == "__main__":
     # see binary_to_decimal_util.py
     exercise_1_str = pad_end("010000000111111010111001")
     exercise_1_val = get_double_precision_val(exercise_1_str)
-    print('%.5f\n' % exercise_1_val)
+    print(exercise_1_val, '\n')
 
     truncated = my_truncate(exercise_1_val, 3)
     rounded = my_round(exercise_1_val, 3)
@@ -18,7 +18,7 @@ if __name__ == "__main__":
     # see abs_rel_error_util.py
     print(absolute_error(exercise_1_val, rounded))
     print(relative_error(exercise_1_val, rounded), '\n')
-
+    
     # see convergence_util.py
     print(min_term_error(1), '\n')
 
